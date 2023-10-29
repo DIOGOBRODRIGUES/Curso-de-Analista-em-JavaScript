@@ -45,10 +45,4 @@ Para mais informações sobre o curso ou questões relacionadas, entre em contat
 
 
 
-Regenerate
-Send a message
 
-Free Research Preview. ChatGPT may produce inaccurate information about people, places, or facts. ChatGPT September 25 Version
-
-?
-ChatGPT

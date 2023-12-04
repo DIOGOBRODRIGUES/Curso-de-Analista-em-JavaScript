@@ -1,0 +1,15 @@
+<script>
+    //Pede  para o usuário inserir o preço  do produto
+    let precoProduto  = parseFloat(prompt("Inserir o preço do produto: "));
+
+    //Calcula o valor com desconto de 10%
+    let precoAvista = precoProduto * 0.9;
+
+    //Calcula o valor de cada parcela em 3x
+    let precoParcelado = precoProduto / 3;
+
+    //Exibe os resultados na tela
+
+    alert("Preço: R$ " + precoProduto.toFixed(2) +"\nÀ vista com 10% de desconto: R$" +precoAvista.toFixed(2) +"\n3x de R$ " + precoParcelado.toFixed(2));
+
+</script>

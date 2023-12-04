@@ -1,0 +1,15 @@
+<script>
+    //Pede para o usuário inserir o valor da conta e o número de clientes
+
+    let valorConta = parseFloat(prompt("Insira o valor total da conta: "));
+    let numClientes = parseInt(prompt("Insisra o número de clientes: "));
+
+    //Calcula o valor a ser pago por cliente
+
+    let valorPorCliente = valorConta / numClientes;
+
+    //Exibe o resultado na tela
+
+    alert("Valor da Conta R$: " + valorConta.toFixed(2) + "\nNúmero de Clientes: " + numClientes + "\nValor por cliente R$: " +valorPorCliente.toFixed(2));
+
+</script>

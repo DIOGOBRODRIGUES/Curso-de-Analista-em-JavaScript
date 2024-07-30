@@ -1,5 +1,5 @@
-const frm = document.querySelector("form") //obtem elementos da página
-const respon  = document.querySelector("span")
+const frm = document.querySelector("form") //obtem elementos da pÃ¡gina
+const respNome  = document.querySelector("span")
 const repLista = document.querySelector("pre")
 
 const pacientes = []
@@ -13,17 +13,17 @@ frm.addEventListener("submit", (e) =>{
     for(let i = 0;  i < pacientes.length;  i++){
         lista += `${i + 1}.${pacientes[i]}\n`
     }
-
-    repLista.innerText = lista // exibi lista de pacientes na página
-    frm.inPaciente.value = "" //limpa conteúdo do formulário
+// console.log(pacientes)
+    repLista.innerText = lista // exibi lista de pacientes na pÃ¡gina
+    frm.inPaciente.value = "" //limpa conteÃºdo do formulÃ¡rio
     frm.inPaciente.focus() //posiciona o cursor no campo 
 
 })
-
-//adiciona um ouvinte para o butão urgencia que está no form
+console.log(pacientes)
+//adiciona um ouvinte para o butÃ£o urgencia que estÃ¡ no form
 
  frm.btUrgencia.addEventListener("click", ()=>{
-    //verifica se as validações estão ok (no caso,  paciente isrequired)
+    //verifica se as validaÃ§Ãµeses estÃ£o ok (no caso,  paciente isrequired)
     if(!frm.checkValidity()){
         alert("informe o nome do paciente a ser atendido em ")
         frm.inPaciente.focus()//posiciona o cursor no campo inPaciente
@@ -34,23 +34,26 @@ frm.addEventListener("submit", (e) =>{
     let lista  = "" //string para concatenar  pacientes
     //forEach aplicado sobre o array paciente 
     pacientes.forEach((paciente, i ) => (lista += `${i+1}.${paciente}\n`))
-    repLista.innerText = lista //exibe lista de paciente na página.  
-    frm.inPaciente.value = "" //limpa o conteudo do campo do formulário
+    repLista.innerText = lista //exibe lista de paciente na pÃ¡gina.  
+    frm.inPaciente.value = "" //limpa o conteudo do campo do formulÃ¡rio
     frm.inPaciente.focus () //posiciona o cursor no campo
  })
 
- //adiciona um ouvinte para o butão de atender 
+ //adiciona um ouvinte para o butÃ£o de atender 
 
  frm.btAtender.addEventListener("click", ()=>{
     //se o tamanho do vetor = 0 
+    console.log (pacientes.length)
     if(pacientes.length = 0){
-        alert("Não a paciente na fila de espera")
+        alert("NÃ£o a paciente na fila de espera")
         frm.inPaciente.focus()
         return
     }
+    console.log(pacientes)
     const atender = pacientes.shift()// remove do inicio da fila e obtem o nome
+    console.log(pacientes)
     respNome.innerText = atender //exibe o nome do paciente em atendimento 
-    let lista = " " //string para contatenar o paciente
+    let lista = "" //string para contatenar o paciente
     pacientes.forEach((paciente, i) => (lista += `${i+1}.${paciente}\n`))
     repLista.innerText = lista // exibe a lista de pacientes na tela 
 

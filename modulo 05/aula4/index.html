@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Briquedoteca</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <img src="img/brinquedo.jpg" alt = "Briquedoteca" class="alta">
+    <h1>Programa Briquedoteca</h1>
+    <form> 
+        <p>Nome da criança: 
+            <input type ="text" id="inNome" required autofocus>
+        </p>
+
+        <p>Idade:
+            <input type="number" id ="inIdade" required>
+            <input type="submit" value = "Adicionar">
+        </p>
+
+        <input type="button" value="Listar todos" id ="btListar">
+        <input type="button" value ="Resumir por idade" id="btResumir">
+    </form>
+
+    <pre></pre>
+    <script src="js/dbcrianca.js"></script>
+</body>
+</html>
